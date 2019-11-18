@@ -1,0 +1,11 @@
+{
+    "sources": ["/Users/tomato/Downloads/"],
+    "params": [
+        {
+            "destination": "/Users/tomato/Documents/College/Fall 2020/Computer Security/Labs/",
+            "extensions": [".doc",".docx"],
+            "keywords": ["Lab"],
+            "has_numbers": true
+        }
+    ]
+}
