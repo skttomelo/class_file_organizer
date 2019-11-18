@@ -30,11 +30,11 @@ def has_keyword(f, keyword_list):
 def has_number(f):
     return any(char.isdigit() for char in f)
 
-# checks if a directory exist, and if it doesn't, it makes it
+# checks if a directory exist, and if it doesn't it makes it
 def cmake_dir(dir):
     if not os.path.isdir(dir):
         try:
-            os.mkdir(dir)
+            os.makedirs(dir)
         except OSError:
             print ("Creation of the directory %s failed or the directory exists already" % dir)
         else:
