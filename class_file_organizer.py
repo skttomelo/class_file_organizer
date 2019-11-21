@@ -55,7 +55,10 @@ for source in settings["sources"]:
     for f in os.listdir(os.getcwd()):
         for param in settings["params"]:
             # check if file has extension in param
-            if has_keyword(f, param["keywords"]) and has_extension(f, param["extensions"]):    
+            if has_extension(f, param["extensions"]):    
+                if len(param["keywords"]) > 0:
+                    if has_keyword(f, param["keywords"]) == False:
+                        continue 
                 # check if file has number parameter and if not do the rest of the logic
                 if param["has_numbers"] == True:
                     if has_number(f) == False:
